@@ -10,6 +10,11 @@ namespace Task024
             x.SetLow = 1;
             x.SetHigh = 6;
             x.value();
+
+            Console.WriteLine();
+
+            Randomize y = new Randomize(1, 6);
+            y.value();
         }
     }
 
@@ -29,16 +34,27 @@ namespace Task024
             set => _high = value;
         }
 
-        public void value ()
+        public Randomize()
+        {
+
+        }
+
+        public Randomize(int low, int high)
+        {
+            _low = low;
+            _high = high;
+        }
+
+        public void value()
         {
             Random number = new Random();
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 20; i++)
             {
                 int x = number.Next(_low, _high + 1);
                 Console.WriteLine(x);
             }
         }
-        
+
 
     }
 }
