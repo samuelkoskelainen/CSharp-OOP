@@ -1,0 +1,2 @@
+﻿You Have opened the file!!
+And the app reads it for you!!
